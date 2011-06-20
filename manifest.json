@@ -1,0 +1,9 @@
+{
+  "name": "AllPinned",
+  "version": "0.0.1",
+  "description": "make all tabs pinned",
+  "background_page": "background.html",
+  "permissions": [
+    "tabs"
+  ]
+}
