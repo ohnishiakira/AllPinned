@@ -21,3 +21,7 @@ chrome.tabs.onCreated.addListener(function(tab) {
     chrome.tabs.move(tab.id, {index: currentTab.index + 1});
   }
 });
+
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+  makePinned(tab);
+});
