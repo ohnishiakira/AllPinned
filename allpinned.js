@@ -22,7 +22,7 @@ chrome.tabs.onCreated.addListener(function(tab) {
     chrome.history.getVisits({url: tab.url}, function(visitItems) {
       console.log(visitItems);
       if (visitItems.length === 0) {
-	return false;
+        return false;
       }
 
       var visitItem = visitItems[visitItems.length - 1];
@@ -30,13 +30,13 @@ chrome.tabs.onCreated.addListener(function(tab) {
       console.log(visitItem.transition);
 
       switch (visitItem.transition) {
-	case "link":
-	  chrome.tabs.move(tab.id, {index: currentTab.index + 1});
-	  break;
-	case "start_page":
-	  // a link opened from other application
-	default:
-	  break;
+        case "link":
+          chrome.tabs.move(tab.id, {index: currentTab.index + 1});
+          break;
+        case "start_page":
+          // a link opened from other application
+        default:
+          break;
       }
     });
   }
