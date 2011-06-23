@@ -4,6 +4,7 @@
   "description": "make all tabs pinned",
   "background_page": "background.html",
   "permissions": [
-    "tabs"
+    "tabs",
+    "history"
   ]
 }
